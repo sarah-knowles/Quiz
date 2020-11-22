@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import fruits from './fruits'
+import questions from './questions'
 
 export default combineReducers({
-  fruits
+  questions
 })

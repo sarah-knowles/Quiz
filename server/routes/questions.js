@@ -5,14 +5,14 @@ const db = require('../db/fruits')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  db.getFruits()
+  db.getQuestions()
     .then(results => {
-      res.json({ fruits: results.map(fruit => fruit.name) })
+      res.json({ questions: results.map(question => question.question) })
       return null
     })
     .catch(err => {
       console.log(err)
-      res.status(500).json({ message: 'Somthing went wrong' })
+      res.status(500).json({ message: 'Something went wrong' })
     })
 })
 
